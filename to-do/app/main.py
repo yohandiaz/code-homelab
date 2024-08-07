@@ -12,7 +12,7 @@ tasks: Dict[str, Task] = {}
 
 @app.get("/")
 async def root():
-    return {"message": "To do app, please go to /docs to see the API documentation."}
+    return {"message": "To do app, go to /docs to see the API documentation."}
 
 @app.post("/tasks", response_model=Dict[str, Task])
 def create_task(task: Task):
